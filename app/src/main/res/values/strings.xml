@@ -1,0 +1,198 @@
+<resources>
+    <!--  App name  -->
+    <string name="app_name">Extrieve Demo</string>
+    <!--  Home page activity main related  -->
+    <string name="thumb_1_title">Capture Document</string>
+    <string name="thumb_2_title">Compress Document</string>
+    <string name="thumb_3_title">QR/BAR Code Create</string>
+    <string name="thumb_4_title">QR/BAR Code Scan</string>
+    <string name="thumb_5_title">Face Detect &amp; Match</string>
+    <string name="thumb_6_title">Build PDF &amp; TIFF</string>
+    <string name="thumb_7_title">Aadhaar Masking</string>
+    <string name="thumb_8_title">KYC Doc Analysis</string>
+    <string name="thumb_9_title">General Doc Analysis</string>
+    <string name="thumb_10_title">Use Cases</string>
+    <!--  MainActivity related  -->
+    <string name="Default">Default</string>
+    <string name="showdialogue">show dialogue</string>
+    <string name="share">Share</string>
+    <string name="Print">Print</string>
+    <string name="ShowSingle">Show Single</string>
+    <string name="GetInfo">Get Information</string>
+    <string name="Delete">Delete</string>
+    <string name="Mask">Mask Image</string>
+    <string name="ShowMore">Show More</string>
+    <string name="ShowSettings">Show Settings</string>
+    <string name="version_2_0_0">Version : 2.0.0</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="reset_to_default_settings">Reset To Default Settings</string>
+    <string name="more">MORE</string>
+    <string name="select_id_capture_mode_to_capture_id_s">Select ID capture mode to capture id\'s</string>
+    <string name="id_capture">ID capture</string>
+    <string name="capture_review_mode">Capture Review Mode:</string>
+    <string name="select_auto_capture_type">Select auto capture type</string>
+    <string name="auto_capture_type">Auto Capture Type</string>
+    <string name="select_document_detection_sensitivity">Select document detection sensitivity</string>
+    <string name="document_detection_sensitivity">Document detection sensitivity</string>
+    <string name="select_capture_color_mode">Select capture color mode</string>
+    <string name="capture_color">Capture color</string>
+    <string name="select_crop_filter_for_image_cropping">Select crop filter for image cropping</string>
+    <string name="crop_filter">Crop filter</string>
+    <string name="select_auto_capture_crop_mode">Select auto capture-crop mode</string>
+    <string name="capture_mode">Capture Mode</string>
+    <string name="capture_modes">CAPTURE MODES</string>
+    <string name="view_saved_documents">View Saved Documents</string>
+    <string name="default_downloads_change_to_documents">Default: downloads, change to documents</string>
+    <string name="output_directory">Output directory</string>
+    <string name="save_app_gallery_images_to_system_gallery">Save app gallery images to system gallery</string>
+    <string name="enable_save_to_gallery">Enable save to gallery</string>
+    <string name="document">DOCUMENT</string>
+    <string name="select_page_dpi_for_capture">Select page DPI for capture</string>
+    <string name="page_dpi">Page DPI</string>
+    <string name="select_page_quality_for_capture">Select page quality for capture</string>
+    <string name="page_quality">Page quality</string>
+    <string name="select_page_layout_for_capture">Select page layout for capture</string>
+    <string name="page_layout">Page layout</string>
+    <string name="page">PAGE</string>
+    <string name="select_max_pages_per_capture">Select max pages per capture</string>
+    <string name="maximum_pages">Maximum pages</string>
+    <string name="only_system_options_can_access">Only system options can access</string>
+    <string name="system_camera">System camera</string>
+    <string name="show_capture_count">Show capture count</string>
+    <string name="capture_count">Capture count</string>
+    <string name="enable_camera_capture_sound">Enable camera capture sound</string>
+    <string name="capture_sound">Capture sound</string>
+    <string name="show_camera_flash_option_in_capture_ui">Show camera flash option in capture UI</string>
+    <string name="capture_flash">Capture flash</string>
+    <string name="show_list_of_document_type_available_in_sdk">show list of document type available in SDK</string>
+    <string name="document_type">Document Type</string>
+    <string name="show_camera_toggle_option_in_capture_ui">Show camera toggle option in capture UI</string>
+    <string name="camera_toggle">Camera toggle</string>
+    <string name="camera">CAMERA</string>
+    <string name="settings">Settings</string>
+    <string name="copyright">Copyright © 1996 – 2025 Extrieve® Technologies. \n All Rights Reserved</string>
+    <string name="copyright_title">Extrieve Demo App for SDK UseCase</string>
+    <string name="quickcapture_doc_scan">Extrieve Demo</string>
+    <string name="file_name">File Name</string>
+    <string name="select_all">Select All</string>
+    <!--  FaceMatch related  -->
+    <string name="face_identification_and_matching">Face Identification and Matching</string>
+    <string name="add_document">Add Document</string>
+    <string name="match_face">Match Face</string>
+    <!-- Bottom Nav bar in doc scan related -->
+    <string name="setting">Setting</string>
+    <string name="load_image">Load Image</string>
+    <string name="capture">Capture</string>
+    <string name="output">Download</string>
+    <string name="delete">Delete</string>
+    <!-- Qr Bar code related-->
+    <string name="qr_bar_code_generate">Optical Code (QR/BAR) Generation</string>
+    <string name="generate_qr_code">Generate QR Code</string>
+    <string name="generate_bar_code">Generate BAR Code</string>
+    <string name="save">Save</string>
+    <string name="enter_the_data_to_generate_qr_bar_code">Enter the data to generate QR/BAR Code</string>
+    <string name="sdk_info">SDK Info</string>
+    <string name="device_info">Device Info</string>
+    <string name="about">About</string>
+    <string name="exit">Exit</string>
+    <!--  kyc document analysis related  -->
+    <string name="kyc_document_analysis">KYC Document Analysis</string>
+    <string name="detect">Detect</string>
+    <string name="extract">Extract</string>
+    <string name="verify">Verify</string>
+    <string name="data">DATA</string>
+    <string name="json">JSON</string>
+    <string name="imgDescription">imgDescription</string>
+    <string name="no_data_found">No data found</string>
+    <!--  general document analysis related  -->
+    <string name="doc_analyse">General Doc Analyse</string>
+    <string name="edittext_hint">Enter the value</string>
+    <string name="general_document_analysis">General Document Analysis</string>
+    <string name="loaderText">Analyzing document</string>
+    <string name="use_cases">Use case samples</string>
+    <string name="asset_capture">Asset Capture</string>
+    <string name="document_capture">Document Capture</string>
+    <string name="aadhaar_masking">Aadhaar Masking</string>
+    <string name="kyc_extraction">KYC Extraction</string>
+    <string name="show_setting">seetings</string>
+    <!--  Camera config related options  -->
+    <string-array name="captureMode">
+        <item>DEFAULT</item>
+        <item>AADHAAR</item>
+    </string-array>
+    <string-array name="pageLayouts">
+        <item>A0</item>
+        <item>A1</item>
+        <item>A2</item>
+        <item>A3</item>
+        <item>A4</item>
+        <item>A5</item>
+        <item>A6</item>
+        <item>A7</item>
+        <item>PHOTO</item>
+    </string-array>
+    <string-array name="imgQuality">
+        <item>PHOTO QUALITY</item>
+        <item>DOCUMENT QUALITY</item>
+        <item>COMPRESSED QUALITY</item>
+    </string-array>
+    <string-array name="imgResizeMode">
+        <item>PRESERVE ASPECT ONLY</item>
+        <item>STRETCH TO EXACT SIZE</item>
+        <item>FIT WITH ASPECT</item>
+    </string-array>
+    <string-array name="imgDPI">
+        <item>100</item>
+        <item>150</item>
+        <item>200</item>
+        <item>300</item>
+        <item>500</item>
+        <item>600</item>
+    </string-array>
+    <string-array name="cropFilter">
+        <item>NONE</item>
+        <item>ENHANCE COLOR</item>
+        <item>REMOVE SHADOW</item>
+        <item>XEROX FILTER</item>
+    </string-array>
+    <string-array name="colorMode">
+        <item>RGB</item>
+        <item>GRAY</item>
+        <item>BLACK AND WHITE</item>
+    </string-array>
+    <string-array name="acToggleMode">
+        <item>DISABLED</item>
+        <item>ENABLE AUTO DEFAULT</item>
+        <item>ENABLE MANUAL DEFAULT</item>
+    </string-array>
+    <string-array name="sensitivityMode">
+        <item>SENS 20</item>
+        <item>SENS 30</item>
+        <item>SENS 40</item>
+        <item>SENS 50</item>
+        <item>SENS 60</item>
+        <item>SENS 70</item>
+        <item>SENS 80</item>
+        <item>SENS 90</item>
+    </string-array>
+    <string-array name="cameraToggleEnable">
+        <item>DISABLE</item>
+        <item>ENABLE FRONT DEFAULT</item>
+        <item>ENABLE BACK DEFAULT</item>
+    </string-array>
+    <string-array name="maxPages">
+        <item>UNLIMITED PAGES</item>
+        <item>SINGLE PAGE</item>
+        <item>2 PAGES</item>
+        <item>5 PAGES</item>
+        <item>10 PAGES</item>
+        <item>20 PAGES</item>
+        <item>50 PAGES</item>
+    </string-array>
+    <string-array name="cropEnable">
+        <item>DISABLE</item>
+        <item>ASSISTED CAPTURE</item>
+        <item>AUTO CROP</item>
+        <item>AUTO CAPTURE</item>
+    </string-array>
+</resources>

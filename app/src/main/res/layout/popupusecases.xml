@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/button_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Title and Close Button -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:id="@+id/popupTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/use_cases"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/secondary"
+            android:layout_centerInParent="true" />
+
+        <ImageView
+            android:id="@+id/closePopup"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/round_close_24"
+            android:contentDescription="@string/todo"
+            android:clickable="true"
+            android:focusable="true"
+            app:tint="@color/secondary" />
+    </RelativeLayout>
+
+    <!-- Tiles in 2 Columns -->
+    <GridLayout
+        android:id="@+id/useCaseGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="2"
+        android:alignmentMode="alignMargins"
+        android:rowOrderPreserved="false"
+        android:useDefaultMargins="true">
+
+        <!-- Tile 1 -->
+        <LinearLayout
+            android:id="@+id/tile_1"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:background="@drawable/button_bg"
+            android:padding="8sp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/setcamera_setting"
+                app:tint="@color/secondary"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/asset_capture"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:textColor="@color/secondary"/>
+        </LinearLayout>
+
+        <!-- Tile 2 -->
+        <LinearLayout
+            android:id="@+id/tile_2"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:background="@drawable/button_bg"
+            android:padding="8sp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/capture_setting"
+                app:tint="@color/secondary"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/document_capture"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:textColor="@color/secondary"/>
+        </LinearLayout>
+
+        <!-- Tile 3 -->
+        <LinearLayout
+            android:id="@+id/tile_3"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:background="@drawable/button_bg"
+            android:padding="8sp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/mask_btn_img"
+                app:tint="@color/secondary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/aadhaar_masking"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:textColor="@color/secondary"/>
+        </LinearLayout>
+
+        <!-- Tile 4 -->
+        <LinearLayout
+            android:id="@+id/tile_4"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:background="@drawable/button_bg"
+            android:padding="8sp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/textract_text_btn"
+                app:tint="@color/secondary"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                    android:text="@string/kyc_extraction"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:textColor="@color/secondary"/>
+        </LinearLayout>
+
+    </GridLayout>
+
+</LinearLayout>

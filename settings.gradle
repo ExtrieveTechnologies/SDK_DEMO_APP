@@ -1,0 +1,18 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        //DEV_HELP : //Add Extrieve ex-pack central repo in settings.gradle
+        maven {url 'https://expack.extrieve.in/maven/'}
+    }
+}
+rootProject.name = "Extrieve Demo"
+include ':app'

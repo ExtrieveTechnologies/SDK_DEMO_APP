@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/showSetting"
+        android:icon="@drawable/reset_setting"
+        android:title="@string/setting" />
+    <item
+        android:id="@+id/loadFromGalleryBtn"
+        android:icon="@drawable/savetogallery_setting"
+        android:title="@string/load_image" />
+    <item
+        android:id="@+id/getPictureButton"
+        android:icon="@drawable/setcamera_setting"
+        android:title="@string/capture" />
+    <item
+        android:id="@+id/buildOutPutBtn"
+        android:icon="@drawable/outputsave_setting"
+        android:title="@string/output" />
+    <item
+        android:id="@+id/delete"
+        android:icon="@drawable/trash"
+        android:title="@string/delete" />
+</menu>
