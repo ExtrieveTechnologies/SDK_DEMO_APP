@@ -3,38 +3,34 @@ plugins {
 }
 
 android {
-    signingConfigs {
-        release {
-            storeFile file('D:\\SVN\\techcomponents\\Capture\\MobileApp\\DemoApp\\Android\\v2.0\\KeyStore\\QcTestAppKey.jks')
-            storePassword 'admin123'
-            keyAlias 'key1'
-            keyPassword 'admin123'
-        }
-    }
     namespace 'com.extrieve.exScan'
-    compileSdk 36
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.extrieve.exScan"
         minSdk 21
         targetSdk 36
-        versionCode 2
-        versionName '2.0.1'
+        versionCode 7
+        versionName '7.0.0'
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        versionNameSuffix 'PRO 2'
+        versionNameSuffix 'PRO 7'
     }
 
     buildTypes {
         release {
+            signingConfig signingConfigs.debug
+        }
+        debug {
+            // Treat this as your production build
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             debuggable false
             jniDebuggable false
-            versionNameSuffix 'Pro'
-            signingConfig signingConfigs.release
+            signingConfig signingConfigs.debug
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -48,7 +44,7 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
     implementation 'com.getkeepsafe.taptargetview:taptargetview:1.15.0'
 
-    //DEV_HELP : Add dependencies for Extrieve QuickCapture & SplicerAi SDK
+    // DEV_HELP : Add dependencies for Extrieve QuickCapture & SplicerAi SDK
     implementation 'com.extrieve.quickcapture:QCv4_PLUS:4.2.15'
     implementation 'com.extrieve.splicer.aisdk:SplicerAIv2:2.1.2'
 }
