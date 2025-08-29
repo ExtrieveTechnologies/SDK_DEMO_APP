@@ -1,3 +1,12 @@
+/*
+Copyright (c) $originalComment.match("Copyright \(c\) (\d+)", 1, "-", "$today.year")$today.year. Extrieve Technologies Pvt. Ltd. All rights reserved.
+ * Extrieve Technologies
+ * Enterprise DMS, Workflow, OCR, PDF solutions & SDKs with AI
+ * www.extrieve.com
+ * Info@extrieve.com | devsupport@extrieve.com
+ * Author : Team Extrieve | Amal Karunakaran.
+ */
+
 package com.extrieve.exScan;
 
 import static android.content.ContentValues.TAG;
@@ -641,7 +650,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    //KARTHIK: double press back implementation
+    //DEV_HELP : double press back implementation
     private void handleCustomBackPressed() {
         if (isPressesOnce) {
             // 🔹 clear only uri list, not files in app storage path
