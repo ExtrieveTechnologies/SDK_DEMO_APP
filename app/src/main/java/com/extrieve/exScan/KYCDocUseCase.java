@@ -112,7 +112,7 @@ public class KYCDocUseCase extends AppCompatActivity {
     private void doKycExtraction() {
         resData = null;
         showLoader("");
-
+        Config.DocumentExtraction.GetDataForKYCExtract = true;
         aiDocument.KYCExtract(response -> {
             try {
                 if (response == null) {

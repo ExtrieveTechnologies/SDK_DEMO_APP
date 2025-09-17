@@ -45,6 +45,6 @@ dependencies {
     implementation 'com.getkeepsafe.taptargetview:taptargetview:1.15.0'
 
     // DEV_HELP : Add dependencies for Extrieve QuickCapture & SplicerAi SDK
-    implementation 'com.extrieve.quickcapture:QCv4_PLUS:4.2.15'
-    implementation 'com.extrieve.splicer.aisdk:SplicerAIv2:2.1.2'
+    implementation 'com.extrieve.quickcapture:QCv4_PLUS:4.2.18'
+    implementation 'com.extrieve.splicer.aisdk:SplicerAIv2:2.0.20'
 }

@@ -41,6 +41,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
@@ -129,7 +130,8 @@ public class MainActivity extends AppCompatActivity {
     String setProfileOption, setCropOption, setFlashOption, setToggleOption, setSoundOption, setShowCountOption;
     ArrayList<String> FileCollection;
     ArrayList<String> FinalOutputCollection;
-    LinearLayout startLinear, backLinear, multiSelectLinear, optionLinear, captureLinear, galleryLayout, ImageviewLinear;
+    FrameLayout    ImageviewLinear;
+    LinearLayout  captureLinear,optionLinear,multiSelectLinear,startLinear,galleryLayout, backLinear;
     ScrollView recyclerLinear;
     Button showSingleBtn, showMoreBtn, resetImageBtn, deleteAllBtn, showBottomDialog, unselectAll;
     ImageView deleteSelected, showSetting;
