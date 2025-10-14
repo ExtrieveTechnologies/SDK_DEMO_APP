@@ -2328,8 +2328,7 @@ public class MainActivity extends AppCompatActivity {
         //before starting camera - configuration can set
         //String quality = ImageHelper.getCurrentImageQuality();
         try {
-            Config.CaptureSupport.BottomStampData =
-                    "Captured on: {DATETIME} | Location: Latitude 12.97601, Longitude 77.54584 | DIGI-PIN: 39J-XXP-7J8L $ Captured using the Demo Application By Extrieve Technologies - Enterprise DMS | Workflow | PDF SDK API with AI | www.extrieve.com  $ This bottom stamp feature can verifies the authenticity & origin of the image. All information shown is for illustration purposes only.";
+            Config.CaptureSupport.BottomStampData = "Captured on: {DATETIME} | Location: Latitude 12.97601, Longitude 77.54584 | DIGI-PIN: 39J-XXP-7J8L $ Captured using the Demo Application By Extrieve Technologies - Enterprise DMS | Workflow | PDF SDK API with AI | www.extrieve.com $ This bottom stamp feature can verifies the authenticity & origin of the image. All information shown is for illustration purposes only.";
             //moving to camera activity in library
             Intent CameraIntent = new Intent(this, Class.forName("com.extrieve.quickcapture.sdk.CameraHelper"));
             Uri photoURI = Uri.parse(Config.CaptureSupport.OutputPath);

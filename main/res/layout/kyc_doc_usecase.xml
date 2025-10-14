@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context=".KYCDocUseCase">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="40sp"
+        android:layout_gravity="top|center"
+        android:background="@color/white"
+        android:elevation="10sp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="5sp"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/docName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="25sp"
+            android:paddingEnd="25sp"
+            android:textColor="@color/purple_500"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/body"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#0C3645"
+        android:orientation="vertical"
+        android:padding="5sp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center">
+            <com.extrieve.exScan.ZoomPanImageView
+                android:id="@+id/inputImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="0dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/todo"/>
+            <LinearLayout
+                android:id="@+id/loaderContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#80FFFFFF"
+                android:gravity="center"
+                android:visibility="gone">
+                <ProgressBar
+                    android:id="@+id/imageLoader"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    style="@android:style/Widget.DeviceDefault.ProgressBar.Large"
+                    android:indeterminateTint="#009688"
+                    android:indeterminateTintMode="src_in" />
+                <TextView
+                    android:id="@+id/loaderMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/extract"
+                    android:textColor="#009688"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/docSubType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/secondary"
+            android:background="@drawable/button_bg"
+            android:gravity="center"
+            android:padding="5sp"
+            android:textSize="14sp"
+            android:layout_marginTop="2sp"
+            android:layout_marginBottom="2sp"/>
+
+        <ScrollView
+            android:id="@+id/showResult"
+            android:layout_width="match_parent"
+            android:layout_height="400sp"
+            android:contentDescription="@string/app_name"
+            android:background="@drawable/button_bg">
+
+            <LinearLayout
+                android:id="@+id/showResultInLinear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/submitBtn"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:layout_marginTop="8sp"
+            android:padding="0dp"
+            android:text="Submit"
+            android:textColor="@color/white"
+            android:background="@color/secondary"/>
+
+    </LinearLayout>
+
+</LinearLayout>

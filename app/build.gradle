@@ -10,10 +10,10 @@ android {
         applicationId "com.extrieve.exScan"
         minSdk 21
         targetSdk 36
-        versionCode 8
-        versionName '8.0.0'
+        versionCode 10
+        versionName '10.0.0'
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        versionNameSuffix 'PLUS 8'
+        versionNameSuffix 'PLUS 10'
     }
 
     buildTypes {
@@ -45,6 +45,6 @@ dependencies {
     implementation 'com.getkeepsafe.taptargetview:taptargetview:1.15.0'
 
     // DEV_HELP : Add dependencies for Extrieve QuickCapture & SplicerAi SDK
-    implementation 'com.extrieve.quickcapture:QCv4_PLUS:4.2.18'
-    implementation 'com.extrieve.splicer.aisdk:SplicerAIv2:2.0.21'
+    implementation 'com.extrieve.quickcapture:QCv4_PLUS:4.2.19'
+    implementation 'com.extrieve.splicer.aisdk:SplicerAIv2:2.0.22'
 }

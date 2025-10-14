@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.extrieve.exScan.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/startLinear"
+        style="@style/TopBar.Base"
+        android:paddingBottom="@dimen/spacing_small">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/spacing_xlarge"
+            android:text="@string/quickcapture_doc_scan"
+            android:textColor="@color/primary"
+            android:textSize="@dimen/font_size_medium"
+            android:textStyle="bold"
+            tools:ignore="RtlSymmetry" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/showSetting"
+            android:layout_width="@dimen/icon_size_large"
+            android:layout_height="@dimen/icon_size_large"
+            android:layout_gravity="center"
+            android:contentDescription="@string/show_setting"
+            android:src="@drawable/reset_setting"
+            app:tint="@color/secondary" />
+
+        <Button
+            android:id="@+id/showOptionDialog"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="@dimen/button_size_standard"
+            android:layout_height="@dimen/button_size_standard"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/spacing_large"
+            android:layout_marginEnd="@dimen/spacing_medium"
+            android:background="@drawable/more"
+            android:backgroundTint="@color/secondary"
+            android:contentDescription="@string/showdialogue" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/backLinear"
+        style="@style/TopBar.Base"
+        android:paddingVertical="@dimen/spacing_small">
+
+        <Button
+            android:id="@+id/showSingle"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="@dimen/button_size_standard"
+            android:layout_height="@dimen/icon_size_xlarge"
+            android:layout_marginHorizontal="@dimen/spacing_medium"
+            android:background="@drawable/back"
+            android:backgroundTint="@color/secondary"
+            android:contentDescription="@string/ShowSingle" />
+
+        <TextView
+            android:id="@+id/filename"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:freezesText="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="@string/file_name"
+            android:textSize="@dimen/font_size_large" />
+
+        <Button
+            android:id="@+id/showMore"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginHorizontal="@dimen/spacing_micro"
+            android:background="@drawable/reset_image"
+            android:contentDescription="@string/ShowMore"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/resetImage"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="@dimen/icon_size_large"
+            android:layout_height="@dimen/icon_size_large"
+            android:layout_marginEnd="@dimen/spacing_medium"
+            android:background="@drawable/reset_image"
+            android:backgroundTint="@color/secondary"
+            android:contentDescription="@string/ShowMore" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/multiSelectLinear"
+        style="@style/TopBar.Base"
+        android:paddingBottom="@dimen/spacing_small"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/spacing_medium"
+            tools:ignore="RtlSymmetry">
+
+            <Button
+                android:id="@+id/unselectAll"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="@dimen/icon_size_xlarge"
+                android:layout_height="@dimen/icon_size_xlarge"
+                android:background="@drawable/unselect"
+                android:backgroundTint="#787878"
+                android:contentDescription="@string/share" />
+
+            <TextView
+                android:id="@+id/selectedCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_medium"
+                android:singleLine="true"
+                android:textSize="@dimen/font_size_large"
+                tools:text="3 selected" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|end"
+            android:orientation="horizontal"
+            android:paddingEnd="@dimen/spacing_medium"
+            tools:ignore="RtlSymmetry">
+
+            <ImageView
+                android:id="@+id/deleteSelected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/spacing_small"
+                android:alpha="0.6"
+                android:src="@drawable/trash"
+                android:visibility="invisible"
+                android:contentDescription="@null" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/select_all"
+                android:textSize="14sp" />
+
+            <CheckBox
+                android:id="@+id/selectAllImages"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/Imageview_frame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:paddingTop="@dimen/spacing_medium">
+
+        <ScrollView
+            android:id="@+id/recyclerLinear"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/galleryLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+
+        <ImageView
+            android:id="@+id/displayImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_final_logo1"
+            android:contentDescription="@null" />
+
+        <com.extrieve.exScan.ZoomPanImageView
+            android:id="@+id/zoom_pan_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_final_logo1" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/optionLinear"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_bar_height"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/spacing_large"
+        android:paddingVertical="@dimen/spacing_micro">
+
+        <Button
+            android:id="@+id/shareBtn"
+            style="@style/OptionBarButton"
+            android:background="@drawable/share"
+            android:contentDescription="@string/share" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/maskBtn"
+            style="@style/OptionBarButton"
+            android:background="@drawable/idmask"
+            android:backgroundTint="#686767"
+            android:contentDescription="@string/Mask"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/textractBtn"
+            style="@style/OptionBarButton"
+            android:background="@drawable/textract_black"
+            android:backgroundTint="#686767"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/rotateLeftBtn"
+            style="@style/OptionBarButton"
+            android:layout_width="@dimen/icon_size_small"
+            android:layout_height="@dimen/icon_size_small"
+            android:background="@drawable/rotateleft" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/rotateRightBtn"
+            style="@style/OptionBarButton"
+            android:layout_width="@dimen/icon_size_small"
+            android:layout_height="@dimen/icon_size_small"
+            android:background="@drawable/rotateright" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/printBtn"
+            style="@style/OptionBarButton"
+            android:background="@drawable/print"
+            android:contentDescription="@string/Print" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/deleteBtn"
+            style="@style/OptionBarButton"
+            android:background="@drawable/trash"
+            android:contentDescription="@string/Delete"
+            android:enabled="false" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/infoBtn"
+            style="@style/OptionBarButton"
+            android:background="@drawable/information"
+            android:contentDescription="@string/GetInfo" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/captureLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_small">
+
+        <LinearLayout
+            android:id="@+id/control"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/showUseCase"
+                style="@style/MenuButtonLayout">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    style="@style/MenuButtonIcon"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/info" />
+
+                <TextView
+                    style="@style/MenuButtonLabel"
+                    android:text="@string/thumb_10_title" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/getPictureButton"
+                style="@style/MenuButtonLayout"
+                android:layout_marginStart="@dimen/spacing_micro">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    style="@style/MenuButtonIcon"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/capture_setting" />
+
+                <TextView
+                    style="@style/MenuButtonLabel"
+                    android:text="@string/thumb_1_title" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/loadFromGalleryBtn"
+                style="@style/MenuButtonLayout"
+                android:layout_marginStart="@dimen/spacing_micro">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    style="@style/MenuButtonIcon"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/savetogallery_setting" />
+
+                <TextView
+                    style="@style/MenuButtonLabel"
+                    android:text="@string/thumb_2_title" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/control1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_micro"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/buildOutPutBtn"
+                style="@style/MenuButtonLayout">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    style="@style/MenuButtonIcon"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/outputsave_setting" />
+
+                <TextView
+                    style="@style/MenuButtonLabel"
+                    android:text="@string/thumb_6_title" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/getQRButton"
+                style="@style/MenuButtonLayout"
+                android:layout_marginStart="@dimen/spacing_micro">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    style="@style/MenuButtonIcon"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/outline_qr_code_scanner_white_48" />
+
+                <TextView
+                    style="@style/MenuButtonLabel"
+                    android:text="@string/thumb_4_title" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/createQRButton"
+                style="@style/MenuButtonLayout"
+                android:layout_marginStart="@dimen/spacing_micro">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    style="@style/MenuButtonIcon"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/qr_code" />
+
+                <TextView
+                    style="@style/MenuButtonLabel"
+                    android:text="@string/thumb_3_title" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/control2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_micro"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/doAadhaarMaskBtn"
+                style="@style/MenuButtonLayout">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    style="@style/MenuButtonIcon"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/mask_btn_img" />
+
+                <TextView
+                    style="@style/MenuButtonLabel"
+                    android:text="@string/thumb_7_title" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/doKycDocAnalysis"
+                style="@style/MenuButtonLayout"
+                android:layout_marginStart="@dimen/spacing_micro">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    style="@style/MenuButtonIcon"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/textract_text_btn" />
+
+                <TextView
+                    style="@style/MenuButtonLabel"
+                    android:text="@string/thumb_8_title" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/goToFaceMatchBtn"
+                style="@style/MenuButtonLayout"
+                android:layout_marginStart="@dimen/spacing_micro">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    style="@style/MenuButtonIcon"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/ic_face_match" />
+
+                <TextView
+                    style="@style/MenuButtonLabel"
+                    android:text="@string/thumb_5_title" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/doGeneralDocAnalysis"
+                style="@style/MenuButtonLayout"
+                android:layout_marginStart="@dimen/spacing_small"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    style="@style/MenuButtonIcon"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/general_doc_analysis" />
+
+                <TextView
+                    style="@style/MenuButtonLabel"
+                    android:text="@string/thumb_9_title" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

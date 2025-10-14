@@ -30,12 +30,14 @@ import com.extrieve.splicer.aisdk.AiDocument;
 import com.extrieve.splicer.aisdk.Config;
 import com.google.android.material.textfield.TextInputLayout;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -113,6 +115,32 @@ public class KYCDocUseCase extends AppCompatActivity {
         resData = null;
         showLoader("");
         Config.DocumentExtraction.GetDataForKYCExtract = true;
+
+        //Dynamically preparing fields map.
+        Map<String, String[]> docFieldsMap = new HashMap<>();
+        String fields_json = aiDocument.GetKYCDocFieldList();
+        try {
+            JSONObject jsonObject = new JSONObject(fields_json);
+
+            // Iterate keys (document types)
+            Iterator<String> keys = jsonObject.keys();
+            while (keys.hasNext()) {
+                String docType = keys.next(); // document type (key)
+                JSONArray fieldsArray = jsonObject.getJSONArray(docType);
+
+                // Convert JSONArray to String[]
+                String[] fields = new String[fieldsArray.length()];
+                for (int i = 0; i < fieldsArray.length(); i++) {
+                    fields[i] = fieldsArray.getString(i);
+                }
+                // Put into map
+                docFieldsMap.put(docType, fields);
+            }
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
         aiDocument.KYCExtract(response -> {
             try {
                 if (response == null) {
@@ -130,7 +158,7 @@ public class KYCDocUseCase extends AppCompatActivity {
                 }
                 resData = extractedJson = data.toString(4);
                 // Step 1: Render all fields based on TYPE
-                generateDynamicFields(data, showResultInLinear, this);
+                generateDynamicFields(data,docFieldsMap, showResultInLinear, this);
                 // Step 2: Start typing animations
                 animateFillFields(data, showResultInLinear, this);
             } catch (JSONException e) {
@@ -154,15 +182,8 @@ public class KYCDocUseCase extends AppCompatActivity {
         return ""; // No match found
     }
 
-    public void generateDynamicFields(JSONObject responseJson, LinearLayout showResultInLinear, Context context) {
+    public void generateDynamicFields(JSONObject responseJson,Map<String, String[]> docFieldsMap, LinearLayout showResultInLinear, Context context) {
         showResultInLinear.removeAllViews();
-
-        Map<String, String[]> docFieldsMap = new HashMap<>();
-        docFieldsMap.put("PAN_CARD", new String[]{"NAME", "FATHER'S NAME", "DOB", "PAN NO", "DATE OF INCORPORATION", "BUSINESS NAME"});
-        docFieldsMap.put("AADHAAR", new String[]{"NAME", "DOB", "GENDER", "AADHAAR NO", "ADDRESS"});
-        docFieldsMap.put("DRIVING_LICENSE", new String[]{"NAME", "DOB", "S/D/W", "ADDRESS", "DATE OF ISSUE", "DATE OF EXPIRY", "LICENSE NO."});
-        docFieldsMap.put("VOTER_ID", new String[]{"NAME", "DOB", "GUARDIAN'S NAME", "ADDRESS", "UID", "GENDER"});
-        docFieldsMap.put("PASSPORT", new String[]{"SURNAME", "GIVEN NAME", "DOB", "DATE OF ISSUE", "DATE OF EXPIRY", "PASSPORT NO", "PLACE OF BIRTH", "PLACE OF ISSUE", "GENDER", "COUNTRY", "COUNTRY CODE"});
 
         String docType = responseJson.optString("TYPE", "").toUpperCase();
         String docSType = responseJson.optString("SUBTYPE", "").toUpperCase();
