@@ -12,7 +12,7 @@
         <item name="android:layout_width">@dimen/icon_size_medium</item>
         <item name="android:layout_height">@dimen/icon_size_medium</item>
         <item name="android:layout_gravity">center</item>
-        <item name="android:backgroundTint">@color/primary</item>
+        <item name="android:backgroundTint">@color/darkFontColor</item>
         <item name="android:padding">@dimen/spacing_medium</item>
     </style>
 
@@ -31,7 +31,7 @@
         <item name="android:layout_width">@dimen/icon_size_xlarge</item>
         <item name="android:layout_height">@dimen/icon_size_xlarge</item>
         <item name="android:layout_gravity">center_horizontal</item>
-        <item name="android:tint">@color/secondary</item>
+        <item name="android:tint">@color/darkBtnColor</item>
     </style>
 
     <style name="MenuButtonLabel">
@@ -39,8 +39,17 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">center_horizontal</item>
         <item name="android:layout_marginTop">@dimen/spacing_micro</item>
-        <item name="android:textColor">@color/secondary</item>
+        <item name="android:textColor">@color/darkBtnColor</item>
         <item name="android:textSize">@dimen/font_size_small</item>
         <item name="android:maxLines">2</item>
     </style>
+
+    <style name="SecurityRow">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+    </style>
+
 </resources>

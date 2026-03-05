@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000"
+    android:clickable="true"
+    android:focusable="true"
+    android:visibility="gone">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:layout_gravity="center">
+
+        <!-- Ripple 1 -->
+        <View
+            android:id="@+id/ripple1"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/ripple_circle" />
+
+        <!-- Ripple 2 -->
+        <View
+            android:id="@+id/ripple2"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/ripple_circle" />
+
+        <!-- Center Dot -->
+        <View
+            android:id="@+id/centerDot"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/center_dot" />
+
+        <!-- Loader Text -->
+        <TextView
+            android:id="@+id/txtLoaderMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/centerDot"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/loading_text_digi_pin"
+            android:textColor="@android:color/white"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+</FrameLayout>

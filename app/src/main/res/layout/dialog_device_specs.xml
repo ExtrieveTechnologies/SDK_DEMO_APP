@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:background="@color/lightFontColor">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- TITLE -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/device_specifications"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/darkFontColor"
+            android:gravity="center"
+            android:layout_marginBottom="15dp"/>
+
+        <!-- ===== ROW TEMPLATE START ===== -->
+
+        <!-- Manufacturer -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:background="@drawable/button_bg"
+            android:layout_marginBottom="8dp"
+            android:elevation="3dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="@dimen/icon_size_large"
+                android:layout_height="@dimen/icon_size_large"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/manufacturer"
+                app:tint="@color/darkBtnColor"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/manufacturer"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/darkFontColor"/>
+
+                <TextView
+                    android:id="@+id/txt_manufacturer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="16sp"
+                    android:textColor="#000000"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Model -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:background="@drawable/button_bg"
+            android:layout_marginBottom="8dp"
+            android:elevation="3dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:contentDescription="@string/todo"
+                android:layout_width="@dimen/icon_size_large"
+                android:layout_height="@dimen/icon_size_large"
+                android:src="@drawable/deviceinfo"
+                app:tint="@color/darkBtnColor"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/model"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/darkFontColor"/>
+
+                <TextView
+                    android:id="@+id/txt_model"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="16sp"
+                    android:textColor="#000000"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- OS Release -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:background="@drawable/button_bg"
+            android:layout_marginBottom="8dp"
+            android:elevation="3dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:contentDescription="@string/todo"
+                android:layout_width="@dimen/icon_size_large"
+                android:layout_height="@dimen/icon_size_large"
+                android:src="@drawable/android"
+                app:tint="@color/darkBtnColor"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/os_release"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/darkFontColor"/>
+
+                <TextView
+                    android:id="@+id/txt_os"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="16sp"
+                    android:textColor="#000000"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- SDK Int -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:background="@drawable/button_bg"
+            android:layout_marginBottom="8dp"
+            android:elevation="3dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:contentDescription="@string/todo"
+                android:layout_width="@dimen/icon_size_large"
+                android:layout_height="@dimen/icon_size_large"
+                android:src="@drawable/code"
+                app:tint="@color/darkBtnColor"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/sdk_int"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/darkFontColor"/>
+
+                <TextView
+                    android:id="@+id/txt_sdk"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="16sp"
+                    android:textColor="#000000"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- CPU Hardware -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:background="@drawable/button_bg"
+            android:layout_marginBottom="8dp"
+            android:elevation="3dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:contentDescription="@string/todo"
+                android:layout_width="@dimen/icon_size_large"
+                android:layout_height="@dimen/icon_size_large"
+                android:src="@drawable/memory"
+                app:tint="@color/darkBtnColor"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/cpu_hardware"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/darkFontColor"/>
+
+                <TextView
+                    android:id="@+id/txt_cpu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="16sp"
+                    android:textColor="#000000"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Total RAM -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:background="@drawable/button_bg"
+            android:layout_marginBottom="8dp"
+            android:elevation="3dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:contentDescription="@string/todo"
+                android:layout_width="@dimen/icon_size_large"
+                android:layout_height="@dimen/icon_size_large"
+                android:src="@drawable/dns"
+                app:tint="@color/darkBtnColor"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/total_ram_mb"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/darkFontColor"/>
+
+                <TextView
+                    android:id="@+id/txt_ram"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="16sp"
+                    android:textColor="#000000"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Free Storage -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:background="@drawable/button_bg"
+            android:layout_marginBottom="8dp"
+            android:elevation="3dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="@dimen/icon_size_large"
+                android:layout_height="@dimen/icon_size_large"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/ha"
+                app:tint="@color/darkBtnColor" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/free_storage_gb"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/darkFontColor"/>
+
+                <TextView
+                    android:id="@+id/txt_storage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="16sp"
+                    android:textColor="#000000"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Battery % -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:background="@drawable/button_bg"
+            android:layout_marginBottom="8dp"
+            android:elevation="3dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:contentDescription="@string/todo"
+                android:layout_width="@dimen/icon_size_large"
+                android:layout_height="@dimen/icon_size_large"
+                android:src="@drawable/battery_full"
+                app:tint="@color/darkBtnColor"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/battery"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/darkFontColor"/>
+
+                <TextView
+                    android:id="@+id/txt_battery"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="16sp"
+                    android:textColor="#000000"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Is Charging -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:background="@drawable/button_bg"
+            android:layout_marginBottom="8dp"
+            android:elevation="3dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:contentDescription="@string/todo"
+                android:layout_width="@dimen/icon_size_large"
+                android:layout_height="@dimen/icon_size_large"
+                android:src="@drawable/battery_charging"
+                app:tint="@color/darkBtnColor"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/is_charging"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/darkFontColor"/>
+
+                <TextView
+                    android:id="@+id/txt_charging"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="16sp"
+                    android:textColor="#000000"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Screen Density -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:background="@drawable/button_bg"
+            android:elevation="3dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:contentDescription="@string/todo"
+                android:layout_width="@dimen/icon_size_large"
+                android:layout_height="@dimen/icon_size_large"
+                android:src="@drawable/dpi_setting"
+                app:tint="@color/darkBtnColor"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/screen_density_dpi"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/darkFontColor"/>
+
+                <TextView
+                    android:id="@+id/txt_dpi"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="16sp"
+                    android:textColor="#000000"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

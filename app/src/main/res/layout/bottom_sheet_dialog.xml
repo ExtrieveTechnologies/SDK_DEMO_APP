@@ -18,7 +18,8 @@
             android:layout_height="23dp"
             android:layout_margin="10dp"
             android:src="@drawable/info"
-            app:tint="@color/secondary"/>
+            app:tint="@color/darkFontColor" />
+
         <TextView
             android:id="@+id/sdkInfoText"
             android:layout_width="wrap_content"
@@ -41,7 +42,8 @@
             android:layout_height="25dp"
             android:layout_margin="10dp"
             android:src="@drawable/deviceinfo"
-            app:tint="@color/secondary"/>
+            app:tint="@color/darkFontColor" />
+
         <TextView
             android:id="@+id/deviceInfoText"
             android:layout_width="wrap_content"
@@ -52,7 +54,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/privacy"
+        android:id="@+id/develop"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?android:attr/selectableItemBackground"
@@ -61,18 +63,18 @@
 
         <ImageView
             android:layout_width="23dp"
-            android:layout_height="23dp"
+            android:layout_height="25dp"
             android:layout_margin="10dp"
-            android:src="@drawable/privacy_setting"
-            app:tint="@color/secondary"/>
+            android:src="@drawable/github"
+            app:tint="@color/darkFontColor" />
 
         <TextView
-            android:id="@+id/privacyText"
+            android:id="@+id/developText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:padding="8dp"
-            android:text="@string/privacy_policy" />
+            android:text="@string/develop" />
     </LinearLayout>
 
     <LinearLayout
@@ -88,7 +90,8 @@
             android:layout_height="23dp"
             android:layout_margin="10dp"
             android:src="@drawable/about"
-            app:tint="@color/secondary"/>
+            app:tint="@color/darkFontColor" />
+
         <TextView
             android:id="@+id/aboutText"
             android:layout_width="wrap_content"
@@ -96,6 +99,54 @@
             android:layout_gravity="center_vertical"
             android:padding="8dp"
             android:text="@string/about" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/privacy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <ImageView
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/privacy_setting"
+            app:tint="@color/darkFontColor" />
+
+        <TextView
+            android:id="@+id/privacyText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="8dp"
+            android:text="@string/privacy_policy" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <ImageView
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/contact"
+            app:tint="@color/darkFontColor" />
+
+        <TextView
+            android:id="@+id/contactText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="8dp"
+            android:text="Contact Us" />
     </LinearLayout>
 
     <LinearLayout
@@ -111,7 +162,8 @@
             android:layout_height="23dp"
             android:layout_margin="10dp"
             android:src="@drawable/exit"
-            app:tint="@color/secondary"/>
+            app:tint="@color/darkFontColor" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

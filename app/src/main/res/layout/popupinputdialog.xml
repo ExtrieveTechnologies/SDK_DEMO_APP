@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:fitsSystemWindows="true"
-    tools:context="com.extrieve.exScan.MainActivity">
+    tools:context="com.extrieve.demo.MainActivity">
 
     <!-- settings navbar -->
     <LinearLayout
@@ -25,7 +25,7 @@
             android:layout_height="30dp"
             android:layout_marginEnd="12dp"
             android:src="@drawable/back"
-            app:tint="@color/secondary" />
+            app:tint="@color/darkFontColor" />
 
         <TextView
             android:layout_width="0dp"
@@ -33,7 +33,7 @@
             android:layout_weight="1"
             android:gravity="start|center_vertical"
             android:text="@string/settings"
-            android:textColor="@color/primary"
+            android:textColor="@color/darkFontColor"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -44,7 +44,7 @@
             android:layout_gravity="center_vertical"
             android:layout_marginStart="10dp"
             android:src="@drawable/saveconfig_setting"
-            app:tint="@color/teal_700" />
+            app:tint="@color/darkBtnColor" />
     </LinearLayout>
 
     <!-- settings ui with scrollview -->
@@ -67,7 +67,7 @@
                 android:layout_marginBottom="10sp"
                 android:gravity="start"
                 android:text="@string/camera"
-                android:textColor="@color/secondary"
+                android:textColor="@color/darkBtnColor"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -85,7 +85,7 @@
                     android:layout_height="30dp"
                     android:layout_margin="10dp"
                     android:src="@drawable/togglecamera_setting"
-                    app:tint="@color/secondary" />
+                    app:tint="@color/darkFontColor" />
 
                 <LinearLayout
                     android:layout_width="285sp"
@@ -146,7 +146,7 @@
                     android:layout_height="30dp"
                     android:layout_margin="10dp"
                     android:src="@drawable/capture_setting"
-                    app:tint="@color/secondary" />
+                    app:tint="@color/darkFontColor" />
 
                 <LinearLayout
                     android:layout_width="285sp"
@@ -206,7 +206,7 @@
                     android:layout_height="30dp"
                     android:layout_margin="10dp"
                     android:src="@drawable/flash_setting"
-                    app:tint="@color/secondary" />
+                    app:tint="@color/darkFontColor" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -251,7 +251,7 @@
                     android:layout_height="30dp"
                     android:layout_margin="10dp"
                     android:src="@drawable/sound_setting"
-                    app:tint="@color/secondary" />
+                    app:tint="@color/darkFontColor" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -296,7 +296,7 @@
                     android:layout_height="30dp"
                     android:layout_margin="10dp"
                     android:src="@drawable/count_setting"
-                    app:tint="@color/secondary" />
+                    app:tint="@color/darkFontColor" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -341,7 +341,7 @@
                     android:layout_height="30dp"
                     android:layout_margin="10dp"
                     android:src="@drawable/setcamera_setting"
-                    app:tint="@color/secondary" />
+                    app:tint="@color/darkFontColor" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -388,7 +388,7 @@
                     android:layout_height="30dp"
                     android:layout_margin="10dp"
                     android:src="@drawable/maxpage_setting"
-                    app:tint="@color/secondary" />
+                    app:tint="@color/darkFontColor" />
 
                 <LinearLayout
                     android:layout_width="285sp"
@@ -449,7 +449,7 @@
                 android:layout_marginBottom="10sp"
                 android:gravity="start"
                 android:text="@string/page"
-                android:textColor="@color/secondary"
+                android:textColor="@color/darkBtnColor"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -467,7 +467,7 @@
                     android:layout_height="30dp"
                     android:layout_margin="10dp"
                     android:src="@drawable/layout_setting"
-                    app:tint="@color/secondary" />
+                    app:tint="@color/darkFontColor" />
 
                 <LinearLayout
                     android:layout_width="285sp"
@@ -529,7 +529,7 @@
                     android:layout_height="30dp"
                     android:layout_margin="10dp"
                     android:src="@drawable/scanquality_setting"
-                    app:tint="@color/secondary" />
+                    app:tint="@color/darkFontColor" />
 
                 <LinearLayout
                     android:layout_width="285sp"
@@ -590,7 +590,7 @@
                     android:layout_height="30dp"
                     android:layout_margin="10dp"
                     android:src="@drawable/dpi_setting"
-                    app:tint="@color/secondary" />
+                    app:tint="@color/darkFontColor" />
 
                 <LinearLayout
                     android:layout_width="285sp"
@@ -651,7 +651,7 @@
                     android:layout_height="30dp"
                     android:layout_margin="10dp"
                     android:src="@drawable/reset_image"
-                    app:tint="@color/secondary" />
+                    app:tint="@color/darkFontColor" />
 
                 <LinearLayout
                     android:layout_width="285sp"
@@ -712,7 +712,7 @@
                 android:layout_marginBottom="5sp"
                 android:gravity="start"
                 android:text="@string/document"
-                android:textColor="@color/secondary"
+                android:textColor="@color/darkBtnColor"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -729,7 +729,7 @@
                     android:layout_height="30dp"
                     android:layout_margin="10dp"
                     android:src="@drawable/savetogallery_setting"
-                    app:tint="@color/secondary" />
+                    app:tint="@color/darkFontColor" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -774,7 +774,7 @@
                     android:layout_height="30dp"
                     android:layout_margin="10dp"
                     android:src="@drawable/outputsave_setting"
-                    app:tint="@color/secondary" />
+                    app:tint="@color/darkFontColor" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -820,7 +820,7 @@
                     android:layout_height="25dp"
                     android:layout_margin="10dp"
                     android:src="@drawable/save"
-                    app:tint="@color/secondary" />
+                    app:tint="@color/darkFontColor" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -846,7 +846,7 @@
                 android:layout_marginBottom="5sp"
                 android:gravity="start"
                 android:text="@string/capture_modes"
-                android:textColor="@color/secondary"
+                android:textColor="@color/darkBtnColor"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -865,7 +865,7 @@
                     android:layout_height="30dp"
                     android:layout_margin="10dp"
                     android:src="@drawable/crop_setting"
-                    app:tint="@color/secondary" />
+                    app:tint="@color/darkFontColor" />
 
                 <LinearLayout
                     android:layout_width="285sp"
@@ -927,7 +927,7 @@
                     android:layout_height="30dp"
                     android:layout_margin="10dp"
                     android:src="@drawable/cropfilter_setting"
-                    app:tint="@color/secondary" />
+                    app:tint="@color/darkFontColor" />
 
                 <LinearLayout
                     android:layout_width="285sp"
@@ -988,7 +988,7 @@
                     android:layout_height="30dp"
                     android:layout_margin="10dp"
                     android:src="@drawable/color_setting"
-                    app:tint="@color/secondary" />
+                    app:tint="@color/darkFontColor" />
 
                 <LinearLayout
                     android:layout_width="285sp"
@@ -1040,7 +1040,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5sp"
-                android:visibility="invisible"
+                android:visibility="gone"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:padding="0sp">
@@ -1050,7 +1050,7 @@
                     android:layout_height="30dp"
                     android:layout_margin="10dp"
                     android:src="@drawable/detectsensitivity"
-                    app:tint="@color/secondary" />
+                    app:tint="@color/darkFontColor" />
 
                 <LinearLayout
                     android:layout_width="285sp"
@@ -1112,7 +1112,7 @@
                     android:layout_height="30dp"
                     android:layout_margin="10dp"
                     android:src="@drawable/capture_setting"
-                    app:tint="@color/secondary" />
+                    app:tint="@color/darkFontColor" />
 
                 <LinearLayout
                     android:layout_width="285sp"
@@ -1197,7 +1197,7 @@
                     android:layout_height="30dp"
                     android:layout_margin="10dp"
                     android:src="@drawable/idcapture_setting"
-                    app:tint="@color/secondary" />
+                    app:tint="@color/darkFontColor" />
 
                 <LinearLayout
                     android:layout_width="280sp"
@@ -1242,7 +1242,7 @@
                 android:layout_marginBottom="5sp"
                 android:gravity="start"
                 android:text="@string/more"
-                android:textColor="@color/secondary"
+                android:textColor="@color/darkBtnColor"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -1260,7 +1260,7 @@
                     android:layout_height="25dp"
                     android:layout_margin="10dp"
                     android:src="@drawable/reset_setting"
-                    app:tint="@color/secondary" />
+                    app:tint="@color/darkFontColor" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -1269,33 +1269,6 @@
                     android:gravity="start"
                     android:padding="5sp"
                     android:text="@string/reset_to_default_settings"
-                    android:textSize="16sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/privacy_policy"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5sp"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:padding="0sp"
-                android:visibility="gone">
-
-                <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_margin="10dp"
-                    android:src="@drawable/privacy_setting"
-                    app:tint="@color/secondary" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="6sp"
-                    android:gravity="start"
-                    android:padding="5sp"
-                    android:text="@string/privacy_policy"
                     android:textSize="16sp" />
             </LinearLayout>
 

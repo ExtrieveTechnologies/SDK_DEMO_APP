@@ -13,31 +13,32 @@
             android:layout_height="30sp"
             android:orientation="horizontal"/>
         <ImageView
+            android:id="@+id/visit"
             android:layout_width="150sp"
-            android:layout_height="50sp"
+            android:layout_height="75sp"
             android:src="@drawable/ic_final_logo1" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/quickcapture_doc_scan"
-            android:textColor="@color/secondary"
+            android:textColor="@color/darkFontColor"
             android:textSize="18sp"
             android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10sp"
+            android:layout_marginTop="5sp"
             android:text="@string/copyright_title"
-            android:textColor="@color/lightPrimary"
+            android:textColor="@color/darkFontColor"
             android:textSize="16sp" />
 
         <TextView
             android:id="@+id/copyright"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30sp"
+            android:layout_marginTop="25sp"
             android:gravity="center"
             android:text="@string/copyright"
             android:textColor="@color/darkGrey"

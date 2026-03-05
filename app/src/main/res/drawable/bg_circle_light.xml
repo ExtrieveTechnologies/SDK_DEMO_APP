@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- ERROR (Red) -->
+    <item android:state_activated="true">
+        <shape android:shape="oval">
+            <solid android:color="#FAE6E7"/>
+            <stroke
+                android:width="3dp"
+                android:color="@color/darkRedColor"/>
+        </shape>
+    </item>
+    <!-- DEFAULT SUCCESS (Green) -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#DCFCE7"/>
+            <stroke
+                android:width="3dp"
+                android:color="@color/darkBtnColor"/>
+        </shape>
+    </item>
+
+</selector>

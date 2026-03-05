@@ -27,7 +27,7 @@
             android:layout_weight="1"
             android:gravity="center_vertical"
             android:text="@string/qr_bar_code_generate"
-            android:textColor="@color/purple_500"
+            android:textColor="@color/darkFontColor"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -38,7 +38,7 @@
             android:layout_marginStart="10sp"
             android:layout_marginEnd="10sp"
             android:src="@drawable/ic_reload_data"
-            app:tint="@color/secondary" />
+            app:tint="@color/lightGray" />
     </LinearLayout>
 
     <LinearLayout
@@ -82,7 +82,7 @@
                 android:letterSpacing="0.0"
                 android:text="@string/generate_qr_code"
                 android:textSize="12sp"
-                android:backgroundTint="@color/secondary"
+                android:backgroundTint="@color/darkBtnColor"
                 android:textColor="@color/white"/>
 
             <Button
@@ -96,7 +96,7 @@
                 android:letterSpacing="0.0"
                 android:text="@string/generate_bar_code"
                 android:textSize="12sp"
-                android:backgroundTint="@color/secondary"
+                android:backgroundTint="@color/darkBtnColor"
                 android:textColor="@color/white"/>
         </LinearLayout>
 
@@ -117,7 +117,7 @@
                 android:layout_height="40sp"
                 android:layout_marginTop="5dp"
                 android:indeterminate="true"
-                android:indeterminateTint="@color/purple_200" />
+                android:indeterminateTint="@color/darkFontColor" />
 
             <ImageView
                 android:id="@+id/resImage"
@@ -141,7 +141,7 @@
                     android:layout_height="30sp"
                     android:layout_gravity="center"
                     android:src="@drawable/baseline_share_24"
-                    app:tint="@color/secondary" />
+                    app:tint="@color/darkFontColor" />
 
                 <ImageView
                     android:id="@+id/save"
@@ -150,7 +150,7 @@
                     android:layout_gravity="center"
                     android:layout_marginStart="25sp"
                     android:src="@drawable/round_save_white_24"
-                    app:tint="@color/secondary" />
+                    app:tint="@color/darkFontColor" />
 
                 <ImageView
                     android:id="@+id/resClose"
@@ -159,7 +159,7 @@
                     android:layout_gravity="center"
                     android:layout_marginStart="20sp"
                     android:src="@drawable/round_close_white_24"
-                    app:tint="@color/secondary" />
+                    app:tint="@color/darkFontColor" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

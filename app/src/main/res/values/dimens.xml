@@ -16,5 +16,5 @@
     <dimen name="font_size_medium">15sp</dimen>
     <dimen name="font_size_large">16sp</dimen>
 
-    <dimen name="elevation_standard">10dp</dimen>
+    <dimen name="elevation_standard">3dp</dimen>
 </resources>

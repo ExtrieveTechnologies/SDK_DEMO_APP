@@ -3,17 +3,30 @@ plugins {
 }
 
 android {
-    namespace 'com.extrieve.exScan'
-    compileSdk 34
+    namespace 'com.extrieve.demo'
+    compileSdk 36
 
     defaultConfig {
-        applicationId "com.extrieve.exScan"
+        applicationId "com.extrieve.demo"
         minSdk 21
         targetSdk 36
-        versionCode 10
-        versionName '10.0.0'
+        versionCode 20
+        versionName '17.2.0'
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        versionNameSuffix 'PLUS 10'
+        versionNameSuffix '-PLUS 17.2'
+        ndk {
+            // This will remove x86 files from the AAB as well
+            abiFilters 'arm64-v8a','armeabi-v7a'
+        }
+    }
+
+    splits {
+        abi {
+            enable true
+            reset()
+            include 'arm64-v8a, armeabi-v7a'
+            universalApk true
+        }
     }
 
     buildTypes {
@@ -39,12 +52,12 @@ android {
 
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.7.1'
-    implementation 'com.google.android.material:material:1.12.0'
-    implementation 'androidx.exifinterface:exifinterface:1.4.1'
+    implementation 'com.google.android.material:material:1.13.0'
+    implementation 'androidx.exifinterface:exifinterface:1.4.2'
     implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
     implementation 'com.getkeepsafe.taptargetview:taptargetview:1.15.0'
 
     // DEV_HELP : Add dependencies for Extrieve QuickCapture & SplicerAi SDK
-    implementation 'com.extrieve.quickcapture:QCv4_PLUS:4.2.19'
-    implementation 'com.extrieve.splicer.aisdk:SplicerAIv2:2.0.22'
+    implementation 'com.extrieve.quickcapture:QCv4_PLUS:4.2.30'
+    implementation 'com.extrieve.splicer.aisdk:SplicerAIv2:2.0.27'
 }

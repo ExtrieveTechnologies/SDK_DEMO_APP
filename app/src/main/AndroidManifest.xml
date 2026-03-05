@@ -4,6 +4,10 @@
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="32" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
@@ -23,7 +27,7 @@
         android:theme="@style/Theme.QuickCapture.NoActionBar"
         tools:targetApi="34">
         <activity
-            android:name="com.extrieve.exScan.MainActivity"
+            android:name="com.extrieve.demo.MainActivity"
             android:windowSoftInputMode="stateVisible|adjustResize"
             android:exported="true">
             <intent-filter>
@@ -40,6 +44,8 @@
         <activity android:name=".KYCDocAnalysis" />
         <activity android:name=".KYCDocUseCase" />
         <activity android:name=".GeneralDocAnalysis" />
+        <activity android:name=".DigiPinActivity" />
+        <activity android:name=".DeviceGuardActivity" />
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.FileProvider"

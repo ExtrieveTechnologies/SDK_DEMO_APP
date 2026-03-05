@@ -15,7 +15,7 @@
         android:layout_height="50sp"
         android:layout_gravity="top|center"
         android:background="@color/white"
-        android:elevation="10sp"
+        android:elevation="3sp"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:paddingBottom="5sp"
@@ -28,7 +28,7 @@
             android:layout_weight="1"
             android:gravity="center_vertical"
             android:text="@string/face_identification_and_matching"
-            android:textColor="@color/purple_500"
+            android:textColor="@color/darkFontColor"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -39,7 +39,7 @@
             android:layout_marginStart="10sp"
             android:layout_marginEnd="10sp"
             android:src="@drawable/ic_reload_data"
-            app:tint="@color/secondary" />
+            app:tint="@color/darkGrey" />
     </LinearLayout>
 
     <LinearLayout
@@ -58,14 +58,14 @@
             android:layout_height="30sp"
             android:layout_gravity="center_horizontal"
             android:src="@drawable/expand_white"
-            app:tint="@color/secondary" />
+            app:tint="@color/darkBtnColor" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10sp"
             android:text="@string/add_document"
-            android:textColor="@color/secondary"
+            android:textColor="@color/darkBtnColor"
             android:textSize="14sp" />
     </LinearLayout>
 
@@ -97,6 +97,6 @@
         android:letterSpacing="0.0"
         android:text="@string/match_face"
         android:textSize="12sp"
-        android:backgroundTint="@color/secondary"
+        android:backgroundTint="@color/darkBtnColor"
         android:textColor="@color/white"/>
 </LinearLayout>

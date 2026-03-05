@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
-    tools:context="com.extrieve.exScan.MainActivity">
+    tools:context="com.extrieve.demo.MainActivity">
 
     <LinearLayout
         android:id="@+id/startLinear"
@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:paddingStart="@dimen/spacing_xlarge"
             android:text="@string/quickcapture_doc_scan"
-            android:textColor="@color/primary"
+            android:textColor="@color/darkFontColor"
             android:textSize="@dimen/font_size_medium"
             android:textStyle="bold"
             tools:ignore="RtlSymmetry" />
@@ -29,13 +29,33 @@
             android:layout_weight="1" />
 
         <ImageView
-            android:id="@+id/showSetting"
+            android:id="@+id/redirectContact"
             android:layout_width="@dimen/icon_size_large"
             android:layout_height="@dimen/icon_size_large"
             android:layout_gravity="center"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/contact"
+            app:tint="@color/darkFontColor" />
+
+        <ImageView
+            android:id="@+id/redirectGithub"
+            android:layout_width="@dimen/icon_size_large"
+            android:layout_height="@dimen/icon_size_large"
+            android:layout_marginStart="@dimen/spacing_large"
+            android:layout_gravity="center"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/github"
+            app:tint="@color/darkFontColor" />
+
+        <ImageView
+            android:id="@+id/showSetting"
+            android:layout_width="@dimen/icon_size_large"
+            android:layout_height="@dimen/icon_size_large"
+            android:layout_marginStart="@dimen/spacing_large"
+            android:layout_gravity="center"
             android:contentDescription="@string/show_setting"
             android:src="@drawable/reset_setting"
-            app:tint="@color/secondary" />
+            app:tint="@color/darkFontColor" />
 
         <Button
             android:id="@+id/showOptionDialog"
@@ -43,10 +63,10 @@
             android:layout_width="@dimen/button_size_standard"
             android:layout_height="@dimen/button_size_standard"
             android:layout_gravity="center"
-            android:layout_marginStart="@dimen/spacing_large"
+            android:layout_marginStart="@dimen/spacing_xlarge"
             android:layout_marginEnd="@dimen/spacing_medium"
             android:background="@drawable/more"
-            android:backgroundTint="@color/secondary"
+            android:backgroundTint="@color/darkFontColor"
             android:contentDescription="@string/showdialogue" />
     </LinearLayout>
 
@@ -62,7 +82,7 @@
             android:layout_height="@dimen/icon_size_xlarge"
             android:layout_marginHorizontal="@dimen/spacing_medium"
             android:background="@drawable/back"
-            android:backgroundTint="@color/secondary"
+            android:backgroundTint="@color/darkFontColor"
             android:contentDescription="@string/ShowSingle" />
 
         <TextView
@@ -97,13 +117,14 @@
             android:layout_height="@dimen/icon_size_large"
             android:layout_marginEnd="@dimen/spacing_medium"
             android:background="@drawable/reset_image"
-            android:backgroundTint="@color/secondary"
+            android:backgroundTint="@color/darkFontColor"
             android:contentDescription="@string/ShowMore" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/multiSelectLinear"
         style="@style/TopBar.Base"
+        android:baselineAligned="false"
         android:paddingBottom="@dimen/spacing_small"
         android:visibility="gone">
 
@@ -196,7 +217,7 @@
             android:src="@drawable/ic_final_logo1"
             android:contentDescription="@null" />
 
-        <com.extrieve.exScan.ZoomPanImageView
+        <com.extrieve.demo.ZoomPanImageView
             android:id="@+id/zoom_pan_image_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -279,8 +300,8 @@
             android:id="@+id/deleteBtn"
             style="@style/OptionBarButton"
             android:background="@drawable/trash"
-            android:contentDescription="@string/Delete"
-            android:enabled="false" />
+            android:alpha="0.6"
+            android:contentDescription="@string/Delete"/>
 
         <Space
             android:layout_width="0dp"
@@ -310,23 +331,8 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:id="@+id/showUseCase"
-                style="@style/MenuButtonLayout">
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    style="@style/MenuButtonIcon"
-                    android:contentDescription="@string/todo"
-                    android:src="@drawable/info" />
-
-                <TextView
-                    style="@style/MenuButtonLabel"
-                    android:text="@string/thumb_10_title" />
-            </LinearLayout>
-
-            <LinearLayout
                 android:id="@+id/getPictureButton"
-                style="@style/MenuButtonLayout"
-                android:layout_marginStart="@dimen/spacing_micro">
+                style="@style/MenuButtonLayout">
 
                 <androidx.appcompat.widget.AppCompatImageView
                     style="@style/MenuButtonIcon"
@@ -335,7 +341,60 @@
 
                 <TextView
                     style="@style/MenuButtonLabel"
-                    android:text="@string/thumb_1_title" />
+                    android:text="@string/document_capture" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/doAadhaarMaskBtn"
+                style="@style/MenuButtonLayout"
+                android:layout_marginStart="@dimen/spacing_micro">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    style="@style/MenuButtonIcon"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/mask_btn_img" />
+
+                <TextView
+                    style="@style/MenuButtonLabel"
+                    android:text="@string/aadhaar_masking" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/doKycExtraction"
+                style="@style/MenuButtonLayout"
+                android:layout_marginStart="@dimen/spacing_micro">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    style="@style/MenuButtonIcon"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/textract_text_btn" />
+
+                <TextView
+                    style="@style/MenuButtonLabel"
+                    android:text="@string/kyc_extraction" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/control1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_micro"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/createGetQRButton"
+                style="@style/MenuButtonLayout">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    style="@style/MenuButtonIcon"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/qr_code" />
+
+                <TextView
+                    style="@style/MenuButtonLabel"
+                    android:text="@string/thumb_3_title" />
             </LinearLayout>
 
             <LinearLayout
@@ -352,18 +411,11 @@
                     style="@style/MenuButtonLabel"
                     android:text="@string/thumb_2_title" />
             </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/control1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_micro"
-            android:orientation="horizontal">
 
             <LinearLayout
                 android:id="@+id/buildOutPutBtn"
-                style="@style/MenuButtonLayout">
+                style="@style/MenuButtonLayout"
+                android:layout_marginStart="@dimen/spacing_micro">
 
                 <androidx.appcompat.widget.AppCompatImageView
                     style="@style/MenuButtonIcon"
@@ -373,36 +425,6 @@
                 <TextView
                     style="@style/MenuButtonLabel"
                     android:text="@string/thumb_6_title" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/getQRButton"
-                style="@style/MenuButtonLayout"
-                android:layout_marginStart="@dimen/spacing_micro">
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    style="@style/MenuButtonIcon"
-                    android:contentDescription="@string/todo"
-                    android:src="@drawable/outline_qr_code_scanner_white_48" />
-
-                <TextView
-                    style="@style/MenuButtonLabel"
-                    android:text="@string/thumb_4_title" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/createQRButton"
-                style="@style/MenuButtonLayout"
-                android:layout_marginStart="@dimen/spacing_micro">
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    style="@style/MenuButtonIcon"
-                    android:contentDescription="@string/todo"
-                    android:src="@drawable/qr_code" />
-
-                <TextView
-                    style="@style/MenuButtonLabel"
-                    android:text="@string/thumb_3_title" />
             </LinearLayout>
         </LinearLayout>
 
@@ -414,13 +436,28 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:id="@+id/doAadhaarMaskBtn"
+                android:id="@+id/deviceGuardCheckBtn"
                 style="@style/MenuButtonLayout">
 
                 <androidx.appcompat.widget.AppCompatImageView
                     style="@style/MenuButtonIcon"
                     android:contentDescription="@string/todo"
-                    android:src="@drawable/mask_btn_img" />
+                    android:src="@drawable/secure" />
+
+                <TextView
+                    style="@style/MenuButtonLabel"
+                    android:text="@string/thumb_4_title" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/locationInfoCheckBtn"
+                style="@style/MenuButtonLayout"
+                android:layout_marginStart="@dimen/spacing_micro">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    style="@style/MenuButtonIcon"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/location" />
 
                 <TextView
                     style="@style/MenuButtonLabel"
@@ -428,33 +465,18 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/doKycDocAnalysis"
+                android:id="@+id/showUseCase"
                 style="@style/MenuButtonLayout"
                 android:layout_marginStart="@dimen/spacing_micro">
 
                 <androidx.appcompat.widget.AppCompatImageView
                     style="@style/MenuButtonIcon"
                     android:contentDescription="@string/todo"
-                    android:src="@drawable/textract_text_btn" />
+                    android:src="@drawable/info" />
 
                 <TextView
                     style="@style/MenuButtonLabel"
-                    android:text="@string/thumb_8_title" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/goToFaceMatchBtn"
-                style="@style/MenuButtonLayout"
-                android:layout_marginStart="@dimen/spacing_micro">
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    style="@style/MenuButtonIcon"
-                    android:contentDescription="@string/todo"
-                    android:src="@drawable/ic_face_match" />
-
-                <TextView
-                    style="@style/MenuButtonLabel"
-                    android:text="@string/thumb_5_title" />
+                    android:text="@string/thumb_10_title" />
             </LinearLayout>
 
             <LinearLayout
